@@ -2,6 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Initialize Swipers
+    initializeProblemsSwiper();
+    initializeProductsSwiper();
+    
     // Header Scroll Effect
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
@@ -69,10 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const nameInput = this.querySelector('input[name="name"]');
             const emailInput = this.querySelector('input[name="email"]');
             const phoneInput = this.querySelector('input[name="phone"]');
-            const professionInput = this.querySelector('select[name="profession"]');
             
             // Check if all inputs were found
-            if (!nameInput || !emailInput || !phoneInput || !professionInput) {
+            if (!nameInput || !emailInput || !phoneInput) {
                 console.error('Erro: Não foi possível encontrar todos os campos do formulário');
                 showErrorMessage('Erro interno. Recarregue a página e tente novamente.');
                 return;
@@ -124,11 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
 
-            // Profession validation
-            if (!professionInput.value || professionInput.value === '') {
-                professionInput.style.borderColor = '#dc3545';
-                isValid = false;
-            }
+
 
             if (isValid) {
                 // Prepare form data
@@ -136,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     nomeCompleto: nameInput.value.trim(),
                     email: emailInput.value.trim(),
                     telefone: phoneInput.value.trim(),
-                    profissao: professionInput.value,
                     tipo: 'programa_vitatop'
                 };
 
@@ -179,12 +177,12 @@ document.addEventListener('DOMContentLoaded', function() {
             formElement.reset();
             
             // Track successful submission
-            trackEvent('submit', 'Form', 'Programa VitaTop Success');
+            trackEvent('submit', 'Form', 'Plataforma VitaTop Success');
 
         } catch (error) {
             console.error('Erro na requisição:', error);
             showErrorMessage('Erro inesperado. Tente novamente em alguns instantes.');
-            trackEvent('error', 'Form', 'Programa VitaTop Error');
+            trackEvent('error', 'Form', 'Plataforma VitaTop Error');
         } finally {
             // Reset button state
             submitBtn.innerHTML = originalText;
@@ -387,12 +385,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize everything
-    console.log('🌱 VitaTop Landing Page Loaded Successfully!');
+    console.log('🌱 Plataforma Digital VitaTop Loaded Successfully!');
     
     // Show welcome message after page load
     setTimeout(() => {
         if (sessionStorage.getItem('vitatop_visited') !== 'true') {
-            showMessage('🌱 Bem-vindo ao VitaTop! Descubra como se libertar dos plantões com o Programa de Afiliados.', 'success');
+            showMessage('🌱 Bem-vindo à Plataforma VitaTop! Descubra como se libertar dos plantões com o Programa de Afiliados.', 'success');
             sessionStorage.setItem('vitatop_visited', 'true');
         }
     }, 2000);
@@ -446,5 +444,170 @@ function animateOnScroll() {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Função para inicializar o Swiper dos problemas
+function initializeProblemsSwiper() {
+    const problemsSwiper = new Swiper('.problems-swiper', {
+        // Configurações básicas
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        
+        // Efeitos visuais
+        effect: 'slide',
+        speed: 800,
+        
+        // Autoplay (opcional)
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        
+        // Navegação
+        navigation: {
+            nextEl: '.problems-swiper-button-next',
+            prevEl: '.problems-swiper-button-prev',
+        },
+        
+        // Paginação
+        pagination: {
+            el: '.problems-swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        
+        // Breakpoints responsivos
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+            },
+        },
+        
+        // Callbacks
+        on: {
+            init: function() {
+                console.log('Problems Swiper initialized');
+            },
+            slideChange: function() {
+                // Adicionar animações aos cards quando mudar o slide
+                const activeSlide = this.slides[this.activeIndex];
+                const activeCard = activeSlide.querySelector('.problem-card');
+                
+                if (activeCard) {
+                    activeCard.style.animation = 'slideInUp 0.6s ease-out';
+                }
+            },
+        },
+    });
+    
+    // Adicionar animações CSS personalizadas
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .problem-card {
+            animation: slideInUp 0.6s ease-out;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    return problemsSwiper;
+}
+
+// Função para inicializar o Swiper dos produtos
+function initializeProductsSwiper() {
+    const productsSwiper = new Swiper('.products-swiper', {
+        // Configurações básicas
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: false,
+        loop: true,
+        
+        // Efeitos visuais
+        effect: 'slide',
+        speed: 800,
+        
+        // Autoplay
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        
+        // Navegação
+        navigation: {
+            nextEl: '.products-swiper-button-next',
+            prevEl: '.products-swiper-button-prev',
+        },
+        
+        // Paginação
+        pagination: {
+            el: '.products-swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        
+        // Breakpoints responsivos
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
+        
+        // Callbacks
+        on: {
+            init: function() {
+                console.log('Products Swiper initialized');
+            },
+            slideChange: function() {
+                // Adicionar animações aos cards quando mudar o slide
+                const activeSlides = this.slides;
+                activeSlides.forEach((slide, index) => {
+                    if (index >= this.activeIndex && index < this.activeIndex + this.params.slidesPerView) {
+                        const productCard = slide.querySelector('.product-card');
+                        if (productCard) {
+                            productCard.style.animation = 'productSlideIn 0.6s ease-out';
+                        }
+                    }
+                });
+            },
+        },
+    });
+    
+    return productsSwiper;
 }
 

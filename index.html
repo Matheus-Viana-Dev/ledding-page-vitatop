@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaTop - Liberte-se dos Plantões com Produtos Naturais</title>
-    <meta name="description" content="Descubra como profissionais de saúde estão criando uma renda extra de 30% vendendo produtos naturais VitaTop online, trabalhando de casa e recuperando o controle da sua vida.">
+    <title>VitaTop - Plataforma Digital para Profissionais de Saúde</title>
+    <meta name="description" content="Descubra como profissionais de saúde estão criando uma renda extra de 30% através da plataforma digital VitaTop, trabalhando de casa e recuperando o controle da sua vida.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -20,7 +21,7 @@
                 <div class="nav-links">
                     <a href="#problemas">Problemas</a>
                     <a href="#solucao">Solução</a>
-                    <a href="#produtos">Produtos VitaTop</a>
+                    <a href="#produtos">Plataforma VitaTop</a>
                     <a href="#resultados">Resultados</a>
                     <a href="#contato" class="cta-nav">Começar Agora</a>
                 </div>
@@ -34,6 +35,21 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-bg"></div>
+        
+        <!-- Elementos decorativos flutuantes - Folhas naturais -->
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        <div class="hero-geometric"></div>
+        
+        <!-- Elementos decorativos de fundo -->
+        <div class="hero-decoration"></div>
+        <div class="hero-decoration"></div>
+        
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -42,7 +58,7 @@
                         <span class="highlight">Intermináveis?</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Descubra como <strong>profissionais de saúde</strong> estão criando uma <strong>renda extra de 30%</strong> vendendo produtos naturais <strong>VitaTop</strong> online, <strong>trabalhando de casa</strong> e recuperando o <strong>controle da sua vida</strong>!
+                        Descubra como <strong>profissionais de saúde</strong> estão criando uma <strong>renda extra de 30%</strong> através da <strong>plataforma digital VitaTop</strong>, <strong>trabalhando de casa</strong> e recuperando o <strong>controle da sua vida</strong>!
                     </p>
                     <div class="hero-benefits">
                         <div class="benefit-item">
@@ -50,8 +66,8 @@
                             <span>Trabalhe no seu tempo</span>
                         </div>
                         <div class="benefit-item">
-                            <i class="fas fa-percentage"></i>
-                            <span>30% de comissão</span>
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>R$ 30 de comissão</span>
                         </div>
                         <div class="benefit-item">
                             <i class="fas fa-hands-helping"></i>
@@ -66,7 +82,7 @@
                     </div>
                     <div class="hero-features">
                         <span><i class="fas fa-check"></i> Sem investimento inicial</span>
-                        <span><i class="fas fa-check"></i> Produtos VitaTop 100% naturais</span>
+                        <span><i class="fas fa-check"></i> Plataforma digital completa</span>
                         <span><i class="fas fa-check"></i> Suporte completo</span>
                     </div>
                 </div>
@@ -94,69 +110,90 @@
         <div class="container">
             <div class="section-header">
                 <h2>Se Você Se Identifica Com Isso,<br><span style="color: #ef4444;">NÃO ESTÁ SOZINHO...</span></h2>
-                <p><i class="fas fa-exclamation-triangle"></i> <strong>Milhares de profissionais de saúde</strong> vivem essas mesmas dores diariamente. Mas existe uma <strong>saída que poucos conhecem</strong>...</p>
+                <p><i class="fas fa-exclamation-triangle"></i> <strong>Milhares de profissionais de saúde</strong> vivem essas mesmas dores diariamente. Mas existe uma <strong>solução digital que poucos conhecem</strong>...</p>
             </div>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Burnout e Exaustão Mental</h3>
-                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Plantões de 24-28h</strong>, turnos irregulares e pressão constante estão <strong>destruindo sua saúde mental</strong>. <span style="color: #ef4444;">66% dos médicos</span> relatam problemas de sono e muitos desenvolvem depressão.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-heart-broken"></i> Resultado:</strong> Você não consegue mais dar o melhor de si nem para os pacientes, nem para sua família.
+            <div class="problems-swiper-container">
+                <div class="swiper problems-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>Burnout e Exaustão Mental</h3>
+                                <p><i class="fas fa-exclamation-triangle"></i> <strong>Plantões de 24-28h</strong>, turnos irregulares e pressão constante afetam sua <strong>saúde mental</strong>. <span style="color: #ef4444;">66% dos médicos</span> relatam problemas de sono.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-heart-broken"></i> Resultado:</strong> Você não consegue mais dar o melhor de si nem para os pacientes, nem para sua família.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3>Falta de Autonomia Profissional</h3>
+                                <p><i class="fas fa-lock"></i> Você se sente como <strong>'apenas mais uma peça do sistema'</strong>, tratado como <strong>número</strong> ao invés de um <strong>profissional qualificado</strong>.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-frown"></i> Resultado:</strong> Frustração constante e sensação de que suas <strong>habilidades estão sendo desperdiçadas</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <h3>Pressão Financeira Crescente</h3>
+                                <p><i class="fas fa-chart-line"></i> <strong>Salários congelados</strong> enquanto <strong>custo de vida aumenta</strong>. Você luta para <strong>'fechar as contas'</strong> e vive com <strong>medo de imprevistos financeiros</strong>.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-dizzy"></i> Resultado:</strong> <strong>Ansiedade constante</strong> sobre dinheiro e necessidade de aceitar <strong>mais plantões para sobreviver</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h3>Perda de Propósito e Qualidade de Vida</h3>
+                                <p><i class="fas fa-hospital"></i> Você entrou na saúde para <strong>ajudar pessoas</strong>, mas agora só consegue pensar em <strong>'quando vai terminar este plantão'</strong>. Sua família reclama que você <strong>nunca está presente</strong>.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-sad-tear"></i> Resultado:</strong> Sensação de que <strong>perdeu o controle da própria vida</strong> e questionamento se vale a pena continuar assim.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <h3>Distúrbios do Sono e Saúde Física</h3>
+                                <p><i class="fas fa-moon"></i> <strong>Plantões noturnos</strong> e <strong>horários irregulares</strong> afetam seu <strong>ciclo circadiano</strong>. Você desenvolve insônia, fadiga crônica e problemas de saúde.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-tired"></i> Resultado:</strong> <strong>Imunidade baixa</strong>, problemas digestivos e risco aumentado de doenças crônicas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Isolamento Social e Familiar</h3>
+                                <p><i class="fas fa-user-friends"></i> <strong>Plantões em datas especiais</strong>, <strong>ausência em eventos familiares</strong> e <strong>falta de tempo para relacionamentos</strong> fazem você se sentir isolado.</p>
+                                <div class="problem-result">
+                                    <strong><i class="fas fa-user-times"></i> Resultado:</strong> <strong>Solidão</strong>, problemas de relacionamento e sensação de que está perdendo momentos importantes da vida.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Falta de Autonomia Profissional</h3>
-                    <p><i class="fas fa-lock"></i> Você se sente como <strong>'apenas mais uma peça do sistema'</strong>, tratado como <strong>número</strong> ao invés de um <strong>profissional qualificado</strong> que dedicou anos estudando.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-frown"></i> Resultado:</strong> Frustração constante e sensação de que suas <strong>habilidades estão sendo desperdiçadas</strong>.
-                    </div>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3>Pressão Financeira Crescente</h3>
-                    <p><i class="fas fa-chart-line"></i> <strong>Salários congelados</strong> enquanto <strong>custo de vida explode</strong>. Você luta para <strong>'fechar as contas'</strong> e vive com <strong>medo de imprevistos financeiros</strong>.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-dizzy"></i> Resultado:</strong> <strong>Ansiedade constante</strong> sobre dinheiro e necessidade de aceitar <strong>mais plantões para sobreviver</strong>.
-                    </div>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Perda de Propósito e Qualidade de Vida</h3>
-                    <p><i class="fas fa-hospital"></i> Você entrou na saúde para <strong>ajudar pessoas</strong>, mas agora só consegue pensar em <strong>'quando vai terminar este plantão'</strong>. Sua família reclama que você <strong>nunca está presente</strong>.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-sad-tear"></i> Resultado:</strong> Sensação de que <strong>perdeu o controle da própria vida</strong> e questionamento se vale a pena continuar assim.
-                    </div>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>Distúrbios do Sono e Saúde Física</h3>
-                    <p><i class="fas fa-moon"></i> <strong>Plantões noturnos</strong> e <strong>horários irregulares</strong> destroem seu <strong>ciclo circadiano</strong>. Você desenvolve insônia, fadiga crônica e problemas de saúde que afetam sua qualidade de vida.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-tired"></i> Resultado:</strong> <strong>Imunidade baixa</strong>, problemas digestivos e risco aumentado de doenças crônicas.
-                    </div>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Isolamento Social e Familiar</h3>
-                    <p><i class="fas fa-user-friends"></i> <strong>Plantões em datas especiais</strong>, <strong>ausência em eventos familiares</strong> e <strong>falta de tempo para relacionamentos</strong> fazem você se sentir isolado e distante das pessoas que ama.</p>
-                    <div class="problem-result">
-                        <strong><i class="fas fa-user-times"></i> Resultado:</strong> <strong>Solidão</strong>, problemas de relacionamento e sensação de que está perdendo momentos importantes da vida.
-                    </div>
-                </div>
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next problems-swiper-button-next"></div>
+                <div class="swiper-button-prev problems-swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination problems-swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -165,12 +202,12 @@
     <section id="solucao" class="solution">
         <div class="container">
             <div class="section-header">
-                <h2>A Solução Que Está <span style="color: #005912;">TRANSFORMANDO</span><br>A Vida de Profissionais Como Você</h2>
-                <p>Imagine ter <strong>controle total sobre sua agenda</strong>, ganhar uma <strong>renda extra significativa</strong> e ainda <strong>ajudar pessoas</strong> com produtos VitaTop que realmente funcionam...</p>
+                <h2>A Solução Digital Que Está <span style="color: #005912;">TRANSFORMANDO</span><br>A Vida de Profissionais Como Você</h2>
+                <p>Imagine ter <strong>controle total sobre sua agenda</strong>, ganhar uma <strong>renda extra significativa</strong> e ainda <strong>ajudar pessoas</strong> através da plataforma VitaTop...</p>
             </div>
             <div class="solution-content">
                 <div class="solution-main">
-                    <h3>Marketing de Afiliados com Produtos VitaTop</h3>
+                    <h3>Plataforma Digital VitaTop para Profissionais de Saúde</h3>
                     <div class="solution-features">
                         <div class="solution-feature">
                             <i class="fas fa-home"></i>
@@ -183,28 +220,28 @@
                             <i class="fas fa-stethoscope"></i>
                             <div>
                                 <h4>Use Sua Expertise</h4>
-                                <p><strong>Monetize seu conhecimento</strong> em saúde recomendando produtos VitaTop que <strong>realmente fazem diferença</strong>.</p>
+                                <p><strong>Monetize seu conhecimento</strong> em saúde através da plataforma VitaTop que <strong>realmente faz diferença</strong>.</p>
                             </div>
                         </div>
                         <div class="solution-feature">
                             <i class="fas fa-chart-line"></i>
                             <div>
                                 <h4>Renda Escalável</h4>
-                                <p>Ganhe <strong>30% de comissão</strong> em cada venda. Quanto mais você se dedica, <strong>maior seu retorno financeiro</strong>.</p>
+                                <p>Ganhe <strong>R$ 30 de comissão</strong> em cada venda. Quanto mais você se dedica, <strong>maior seu retorno financeiro</strong>.</p>
                             </div>
                         </div>
                     </div>
                     <button class="btn btn-primary" onclick="scrollToSection('produtos')">
                         <i class="fas fa-play"></i>
-                        QUERO CONHECER OS PRODUTOS VITATOP!
+                        QUERO CONHECER A PLATAFORMA VITATOP!
                     </button>
                 </div>
                 <div class="solution-sidebar">
-                    <h4>Por Que Produtos VitaTop?</h4>
+                    <h4>Por Que a Plataforma VitaTop?</h4>
                     <ul>
                         <li>Mercado em constante crescimento</li>
-                        <li>Margem de lucro alta - comissões de até 30%</li>
-                        <li>Produtos que você pode recomendar com confiança</li>
+                        <li>Margem de lucro alta - comissões de até R$ 30</li>
+                        <li>Plataforma que você pode usar com confiança</li>
                         <li>Nicho perene - saúde nunca sai de moda</li>
                         <li>Público que valoriza recomendações de profissionais</li>
                     </ul>
@@ -222,92 +259,145 @@
                             <span>50 vendas/mês de R$ 200</span>
                             <strong>R$ 3.000</strong>
                         </div>
-                        <small>*Comissão de 30% sobre vendas</small>
+                        <small>*Comissão de R$ 30 sobre vendas</small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Produtos VitaTop Section -->
+    <!-- Plataforma VitaTop Section -->
     <section id="produtos" class="products">
         <div class="container">
             <div class="section-header">
-                <h2>Produtos VitaTop - Sua Solução para Liberdade</h2>
-                <p>Conheça os produtos naturais que estão transformando a vida de milhares de pessoas e podem transformar a sua também</p>
+                <h2>Plataforma VitaTop - Sua Solução para Liberdade</h2>
+                <p>Conheça a plataforma digital que está transformando a vida de milhares de profissionais de saúde e pode transformar a sua também</p>
             </div>
-            <div class="products-grid">
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="product-image">
-                        <div class="product-badge">Mais Vendido</div>
-                        <img src="https://amarguinho.meiti.com.br/img/amarguinho.png" alt="">
-                    </div>
-                    <h3>Amarguinho</h3>
-                    <p>Acabou com azia, refluxo e problemas estomacais. Natural e sem efeitos colaterais.</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Alívio imediato</span>
-                        <span><i class="fas fa-check"></i> 100% natural</span>
+            <div class="products-swiper-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge">Mais Vendido</div>
+                                    <img src="https://amarguinho.meiti.com.br/img/amarguinho.png" alt="Amarguinho - Suplemento Natural">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Amarguinho</h3>
+                                    <p>Acabou com azia, refluxo e problemas estomacais. Natural e sem efeitos colaterais.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Alívio imediato</span>
+                                        <span><i class="fas fa-check"></i> 100% natural</span>
+                                        <span><i class="fas fa-check"></i> Sem contra-indicações</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://vitatop.tecskill.com.br/foto/45/EXTRATO-DE-PROPOLIS-3.webp" alt="Extrato de Própolis">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Extrato Alcoólico de Própolis 30ML</h3>
+                                    <p>Produto natural e altíssima qualidade para fortalecer sua imunidade.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Imunidade</span>
+                                        <span><i class="fas fa-check"></i> Antioxidante e Anti-inflamatório</span>
+                                        <span><i class="fas fa-check"></i> Cicatrização e Regeneração</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://vitatop.tecskill.com.br/foto/51/682348c6648f8_fortalece.png" alt="Fortalece - Suplemento Capilar">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Fortalece</h3>
+                                    <p>A força que seu cabelo merece, conheça o Fortalece para cabelos mais fortes e saudáveis.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Crescimento forte</span>
+                                        <span><i class="fas fa-check"></i> Queda reduzida</span>
+                                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://vitatop.tecskill.com.br/foto/52/68234cfec17f7_kit_hair.png" alt="Kit VitaTop Hair">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Kit VitaTop Hair</h3>
+                                    <p>Linha perfeita para quem busca solução completa para combater a queda de cabelo.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Crescimento forte</span>
+                                        <span><i class="fas fa-check"></i> Queda reduzida</span>
+                                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://vitatop.tecskill.com.br/foto/2/GLICOTOP.webp" alt="Glicotop - Controle Glicêmico">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Glicotop</h3>
+                                    <p>Suplemento natural composto por ervas medicinais, vitaminas e minerais que atuam prevenindo complicações do Diabetes.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Controle glicêmico</span>
+                                        <span><i class="fas fa-check"></i> Circulação Saudável</span>
+                                        <span><i class="fas fa-check"></i> Saúde dos Olhos</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://vitatop.tecskill.com.br/foto/3/MAGRITOP.webp" alt="Magritop - Controle de Peso">
+                                </div>
+                                <div class="product-content">
+                                    <h3>Magritop</h3>
+                                    <p>Acelera o metabolismo e ajuda no controle de peso de forma saudável e natural.</p>
+                                    <div class="product-benefits">
+                                        <span><i class="fas fa-check"></i> Queima gordura</span>
+                                        <span><i class="fas fa-check"></i> Acelera metabolismo</span>
+                                        <span><i class="fas fa-check"></i> Energia natural</span>
+                                    </div>
+                                    <div class="product-price">
+                                        Comissão: R$ 30
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="product-image">
-                        <img src="https://vitatop.tecskill.com.br/foto/45/EXTRATO-DE-PROPOLIS-3.webp" alt="">
-                    </div>
-                    <h3>Extrato Alcoólico de Própolis 30ML</h3>
-                    <p>Produto natural e altíssima qualidade.</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Imunidade</span>
-                        <span><i class="fas fa-check"></i> Antioxidante e Anti-inflamatório</span>
-                        <span><i class="fas fa-check"></i> Cicatrização e Regeneração</span>
-                    </div>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="product-image">
-                        <img src="https://vitatop.tecskill.com.br/foto/51/682348c6648f8_fortalece.png" alt="">
-                    </div>
-                    <h3>Fortalece</h3>
-                    <p>A força que seu cabelo Merece, conheça o Fortalece.</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Crescimento forte</span>
-                        <span><i class="fas fa-check"></i> Queda reduzida</span>
-                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
-                    </div>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="product-image">
-                        <img src="https://vitatop.tecskill.com.br/foto/52/68234cfec17f7_kit_hair.png" alt="">
-                    </div>
-                    <h3>Kit VitaTop Hair</h3>
-                    <p>Linha perfeita para quem busca solução completa para combater a queda de cabelo.</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Crescimento forte</span>
-                        <span><i class="fas fa-check"></i> Queda reduzida</span>
-                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
-                    </div>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="product-image">
-                        <img src="https://vitatop.tecskill.com.br/foto/2/GLICOTOP.webp" alt="">
-                    </div>
-                    <h3>Glicotop</h3>
-                    <p>Suplemento natural composto por ervas medicinais, vitaminas e minerais que atuam prevenindo complicações do Diabetes</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Controle glicêmico</span>
-                        <span><i class="fas fa-check"></i> Circulação Saudável</span>
-                        <span><i class="fas fa-check"></i> Saúde dos Olhos</span>
-                    </div>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="product-image">
-                        <img src="https://vitatop.tecskill.com.br/foto/3/MAGRITOP.webp" alt="">
-                    </div>
-                    <h3>Magritop</h3>
-                    <p>Acelera o metabolismo e ajuda no controle de peso de forma saudável e natural.</p>
-                    <div class="product-benefits">
-                        <span><i class="fas fa-check"></i> Queima gordura</span>
-                        <span><i class="fas fa-check"></i> Acelera metabolismo</span>
-                    </div>
-                </div>
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next products-swiper-button-next"></div>
+                <div class="swiper-button-prev products-swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination products-swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -317,12 +407,12 @@
         <div class="container">
             <div class="section-header">
                 <h2>Veja Os Resultados de Quem<br><span style="color: #4FBF31;">JÁ ESTÁ TRANSFORMANDO SUA VIDA!</span></h2>
-                <p><strong>Profissionais reais</strong> que saíram do ciclo de esgotamento e criaram uma <strong>nova fonte de renda</strong> com produtos VitaTop</p>
+                <p><strong>Profissionais reais</strong> que saíram do ciclo de esgotamento e criaram uma <strong>nova fonte de renda</strong> através da plataforma VitaTop</p>
             </div>
             <div class="results-grid">
                 <div class="result-card">
                     <div class="result-content">
-                        <p>Em 6 meses consegui uma <strong>renda extra de R$ 2.800/mês</strong> vendendo produtos naturais VitaTop. Agora tenho <strong>mais tempo para minha família</strong> e <strong>menos estresse financeiro</strong>!</p>
+                        <p>Em 6 meses consegui uma <strong>renda extra de R$ 2.800/mês</strong> vendendo nutracêuticos pela plataforma VitaTop. Agora tenho <strong>mais tempo para minha família</strong> e <strong>menos estresse financeiro</strong>!</p>
                     </div>
                     <div class="result-author">
                         <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=120&h=120&fit=crop&crop=face" alt="Dra. Marina Silva">
@@ -335,7 +425,7 @@
                 </div>
                 <div class="result-card">
                     <div class="result-content">
-                        <p>Trabalhava <strong>60h/semana</strong> e mal conseguia pagar as contas. Hoje ganho <strong>R$ 3.200 extras</strong> trabalhando <strong>2h por dia de casa</strong> vendendo VitaTop. Mudou minha vida completamente!</p>
+                        <p>Trabalhava <strong>60h/semana</strong> e mal conseguia pagar as contas. Hoje ganho <strong>R$ 3.200 extras</strong> trabalhando <strong>2h por dia de casa</strong> vendendo encapsulados VitaTop. Mudou minha vida completamente!</p>
                     </div>
                     <div class="result-author">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" alt="Enf. Carlos Rodrigues">
@@ -348,7 +438,7 @@
                 </div>
                 <div class="result-card">
                     <div class="result-content">
-                        <p>Sempre recomendava produtos naturais aos pacientes, agora <strong>ganho por isso</strong>! Já faturei <strong>R$ 15.000 em 3 meses</strong> recomendando produtos VitaTop que acredito.</p>
+                        <p>Sempre recomendava produtos naturais aos pacientes, agora <strong>ganho por isso</strong>! Já faturei <strong>R$ 15.000 em 3 meses</strong> recomendando nutracêuticos VitaTop que acredito.</p>
                     </div>
                     <div class="result-author">
                         <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=120&h=120&fit=crop&crop=face" alt="Dra. Ana Beatriz">
@@ -378,14 +468,14 @@
                         PROGRAMA EXCLUSIVO VITATOP
                     </div>
                     <h2>Transforme sua vida profissional hoje mesmo!</h2>
-                    <h3>Junte-se ao <strong>Programa de Afiliados VitaTop</strong> e comece a ganhar <strong>R$ 3.000+ por mês</strong> trabalhando de casa!</h3>
+                    <h3>Junte-se ao <strong>Programa de Afiliados da Plataforma VitaTop</strong> e comece a ganhar <strong>R$ 3.000+ por mês</strong> trabalhando de casa!</h3>
                     <div class="program-stats">
                         <div class="stat">
                             <span class="stat-number">+2.500</span>
                             <span class="stat-label">profissionais já se libertaram</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">30%</span>
+                            <span class="stat-number">R$ 30</span>
                             <span class="stat-label">de comissão por venda</span>
                         </div>
                         <div class="stat">
@@ -396,18 +486,23 @@
                     <div class="program-benefits">
                         <h4>O que você recebe no programa:</h4>
                         <ul>
-                            <li><strong>Acesso completo à plataforma VitaTop</strong> com todos os produtos</li>
+                            <li><strong>Acesso completo à plataforma digital VitaTop</strong> com todos os recursos</li>
                             <li><strong>Treinamento completo</strong> de marketing digital</li>
                             <li><strong>Materiais de divulgação</strong> profissionais</li>
                             <li><strong>Suporte personalizado</strong> via WhatsApp</li>
                             <li><strong>Dashboard de resultados</strong> em tempo real</li>
                             <li><strong>Comunidade exclusiva</strong> de afiliados</li>
+                            <li><strong>EBOOK GRATUITO</strong> - "Como Ganhar R$ 3.000+ por Mês com VitaTop"</li>
                         </ul>
                     </div>
                 </div>
                 <div class="program-form">
                     <form id="programForm" class="program-form-content">
-                        <h3>Cadastre-se no Programa VitaTop</h3>
+                        <h3>Cadastre-se na Plataforma VitaTop</h3>
+                        <div class="ebook-bonus">
+                            <i class="fas fa-gift"></i>
+                            <strong>BÔNUS ESPECIAL:</strong> Cadastrando agora você ganha o ebook "Como Ganhar R$ 3.000+ por Mês com VitaTop" GRATUITAMENTE!
+                        </div>
                         <div class="form-group">
                             <label for="name">Seu nome completo</label>
                             <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
@@ -420,21 +515,9 @@
                             <label for="phone">Seu WhatsApp</label>
                             <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required>
                         </div>
-                        <div class="form-group">
-                            <label for="profession">Sua profissão na saúde</label>
-                            <select id="profession" name="profession" required>
-                                <option value="">Selecione sua profissão</option>
-                                <option value="medico">Médico</option>
-                                <option value="enfermeiro">Enfermeiro</option>
-                                <option value="farmaceutico">Farmacêutico</option>
-                                <option value="nutricionista">Nutricionista</option>
-                                <option value="fisioterapeuta">Fisioterapeuta</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
                         <button type="submit" class="btn btn-primary btn-full">
                             <i class="fas fa-rocket"></i>
-                            QUERO COMEÇAR AGORA!
+                            QUERO COMEÇAR AGORA E GANHAR O EBOOK!
                         </button>
                         <p class="form-disclaimer">
                             <i class="fas fa-lock"></i>
@@ -454,7 +537,7 @@
                     <div class="logo">
                         <img src="logo-vitatop-branco.png" alt="VitaTop" width="180">
                     </div>
-                    <p>Transformando a vida de profissionais de saúde através de produtos naturais VitaTop e oportunidades digitais éticas e rentáveis.</p>
+                    <p>Transformando a vida de profissionais de saúde através da plataforma digital VitaTop e oportunidades éticas e rentáveis.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
@@ -462,7 +545,7 @@
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#problemas">Problemas</a></li>
                         <li><a href="#solucao">Solução</a></li>
-                        <li><a href="#produtos">Produtos VitaTop</a></li>
+                        <li><a href="#produtos">Plataforma VitaTop</a></li>
                         <li><a href="#resultados">Resultados</a></li>
                         <li><a href="#contato">Programa VitaTop</a></li>
                     </ul>
@@ -472,7 +555,7 @@
                     <ul>
                         <li><a href="#">Sobre Nós</a></li>
                         <li><a href="#">Como Funciona</a></li>
-                        <li><a href="#">Produtos Naturais</a></li>
+                        <li><a href="#">Plataforma Digital</a></li>
                         <li><a href="#">Suporte</a></li>
                         <li><a href="#">FAQ</a></li>
                     </ul>
@@ -506,7 +589,8 @@
                 <h3>Cadastro Realizado!</h3>
             </div>
             <div class="modal-body">
-                <p><i class="fas fa-envelope"></i> Seu cadastro foi realizado com sucesso! Nossa equipe entrará em contato em até 24 horas para dar as boas-vindas ao Programa VitaTop.</p>
+                <p><i class="fas fa-envelope"></i> Seu cadastro foi realizado com sucesso! Nossa equipe entrará em contato em até 24 horas para dar as boas-vindas à Plataforma VitaTop.</p>
+                <p><i class="fas fa-gift"></i> <strong>BÔNUS CONFIRMADO:</strong> O ebook "Como Ganhar R$ 3.000+ por Mês com VitaTop" foi enviado para seu e-mail!</p>
                 <p><i class="fas fa-rocket"></i> Prepare-se para transformar sua vida profissional e começar sua jornada de liberdade financeira!</p>
             </div>
             <div class="modal-footer">
@@ -516,6 +600,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
