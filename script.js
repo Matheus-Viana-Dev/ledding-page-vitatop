@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeProblemsSwiper();
     initializeProductsSwiper();
     
+    // Initialize Mobile Menu
+    initializeMobileMenu();
+    
+    // Initialize Dark Mode
+    initializeDarkMode();
+    
     // Header Scroll Effect
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
@@ -13,12 +19,25 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
+        // Verificar se está no modo escuro
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
         if (scrollTop > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 77, 0, 0.1)';
+            if (isDarkMode) {
+                header.style.background = 'rgba(15, 15, 15, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 77, 0, 0.1)';
+            }
         } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
+            if (isDarkMode) {
+                header.style.background = 'rgba(15, 15, 15, 0.95)';
+                header.style.boxShadow = 'none';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
         }
 
         // Hide/Show header on scroll
@@ -535,6 +554,50 @@ function initializeProblemsSwiper() {
     return problemsSwiper;
 }
 
+// Função para inicializar o menu mobile
+function initializeMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMobile = document.getElementById('closeMobile');
+    const mobileNavLinks = mobileNav.querySelectorAll('a');
+    
+    // Abrir menu mobile
+    mobileMenu.addEventListener('click', () => {
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Previne scroll
+    });
+    
+    // Fechar menu mobile
+    closeMobile.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = ''; // Restaura scroll
+    });
+    
+    // Fechar menu ao clicar em um link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Fechar menu ao clicar fora dele
+    mobileNav.addEventListener('click', (e) => {
+        if (e.target === mobileNav) {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Fechar menu com tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
 // Função para inicializar o Swiper dos produtos
 function initializeProductsSwiper() {
     const productsSwiper = new Swiper('.products-swiper', {
@@ -609,5 +672,47 @@ function initializeProductsSwiper() {
     });
     
     return productsSwiper;
+}
+
+// Função para detectar e aplicar o modo escuro
+function initializeDarkMode() {
+    const logo = document.querySelector('.logo img');
+    const logoNormal = 'logo.png';
+    const logoDark = 'logo-vitatop-branco.png';
+    
+    // Função para verificar se está no modo escuro
+    function isDarkMode() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    
+    // Função para trocar a logo
+    function updateLogo() {
+        if (isDarkMode()) {
+            logo.src = logoDark;
+            logo.alt = 'VitaTop - Modo Escuro';
+        } else {
+            logo.src = logoNormal;
+            logo.alt = 'VitaTop';
+        }
+    }
+    
+    // Aplicar logo inicial
+    updateLogo();
+    
+    // Escutar mudanças no modo escuro
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addEventListener('change', updateLogo);
+    
+    // Também escutar mudanças no CSS (para casos onde o usuário força o modo escuro)
+    const observer = new MutationObserver(() => {
+        updateLogo();
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class', 'style']
+    });
+    
+    console.log('Dark mode detection initialized');
 }
 
