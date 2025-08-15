@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- Header -->
@@ -98,88 +96,67 @@
                 <h2>Se Você Se Identifica Com Isso,<br><span style="color: #ef4444;">NÃO ESTÁ SOZINHO...</span></h2>
                 <p><i class="fas fa-exclamation-triangle"></i> <strong>Milhares de profissionais de saúde</strong> vivem essas mesmas dores diariamente. Mas existe uma <strong>saída que poucos conhecem</strong>...</p>
             </div>
-            <div class="problems-swiper-container">
-                <div class="swiper problems-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <h3>Burnout e Exaustão Mental</h3>
-                                <p><i class="fas fa-exclamation-triangle"></i> <strong>Plantões de 24-28h</strong>, turnos irregulares e pressão constante estão <strong>destruindo sua saúde mental</strong>. <span style="color: #ef4444;">66% dos médicos</span> relatam problemas de sono e muitos desenvolvem depressão.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-heart-broken"></i> Resultado:</strong> Você não consegue mais dar o melhor de si nem para os pacientes, nem para sua família.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <h3>Falta de Autonomia Profissional</h3>
-                                <p><i class="fas fa-lock"></i> Você se sente como <strong>'apenas mais uma peça do sistema'</strong>, tratado como <strong>número</strong> ao invés de um <strong>profissional qualificado</strong> que dedicou anos estudando.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-frown"></i> Resultado:</strong> Frustração constante e sensação de que suas <strong>habilidades estão sendo desperdiçadas</strong>.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-dollar-sign"></i>
-                                </div>
-                                <h3>Pressão Financeira Crescente</h3>
-                                <p><i class="fas fa-chart-line"></i> <strong>Salários congelados</strong> enquanto <strong>custo de vida explode</strong>. Você luta para <strong>'fechar as contas'</strong> e vive com <strong>medo de imprevistos financeiros</strong>.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-dizzy"></i> Resultado:</strong> <strong>Ansiedade constante</strong> sobre dinheiro e necessidade de aceitar <strong>mais plantões para sobreviver</strong>.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-home"></i>
-                                </div>
-                                <h3>Perda de Propósito e Qualidade de Vida</h3>
-                                <p><i class="fas fa-hospital"></i> Você entrou na saúde para <strong>ajudar pessoas</strong>, mas agora só consegue pensar em <strong>'quando vai terminar este plantão'</strong>. Sua família reclama que você <strong>nunca está presente</strong>.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-sad-tear"></i> Resultado:</strong> Sensação de que <strong>perdeu o controle da própria vida</strong> e questionamento se vale a pena continuar assim.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-bed"></i>
-                                </div>
-                                <h3>Distúrbios do Sono e Saúde Física</h3>
-                                <p><i class="fas fa-moon"></i> <strong>Plantões noturnos</strong> e <strong>horários irregulares</strong> destroem seu <strong>ciclo circadiano</strong>. Você desenvolve insônia, fadiga crônica e problemas de saúde que afetam sua qualidade de vida.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-tired"></i> Resultado:</strong> <strong>Imunidade baixa</strong>, problemas digestivos e risco aumentado de doenças crônicas.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="problem-card">
-                                <div class="problem-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3>Isolamento Social e Familiar</h3>
-                                <p><i class="fas fa-user-friends"></i> <strong>Plantões em datas especiais</strong>, <strong>ausência em eventos familiares</strong> e <strong>falta de tempo para relacionamentos</strong> fazem você se sentir isolado e distante das pessoas que ama.</p>
-                                <div class="problem-result">
-                                    <strong><i class="fas fa-user-times"></i> Resultado:</strong> <strong>Solidão</strong>, problemas de relacionamento e sensação de que está perdendo momentos importantes da vida.
-                                </div>
-                            </div>
-                        </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Burnout e Exaustão Mental</h3>
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Plantões de 24-28h</strong>, turnos irregulares e pressão constante estão <strong>destruindo sua saúde mental</strong>. <span style="color: #ef4444;">66% dos médicos</span> relatam problemas de sono e muitos desenvolvem depressão.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-heart-broken"></i> Resultado:</strong> Você não consegue mais dar o melhor de si nem para os pacientes, nem para sua família.
                     </div>
                 </div>
-                <!-- Navegação do Swiper -->
-                <div class="swiper-button-next problems-next"></div>
-                <div class="swiper-button-prev problems-prev"></div>
-                <!-- Paginação do Swiper -->
-                <div class="swiper-pagination problems-pagination"></div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Falta de Autonomia Profissional</h3>
+                    <p><i class="fas fa-lock"></i> Você se sente como <strong>'apenas mais uma peça do sistema'</strong>, tratado como <strong>número</strong> ao invés de um <strong>profissional qualificado</strong> que dedicou anos estudando.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-frown"></i> Resultado:</strong> Frustração constante e sensação de que suas <strong>habilidades estão sendo desperdiçadas</strong>.
+                    </div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Pressão Financeira Crescente</h3>
+                    <p><i class="fas fa-chart-line"></i> <strong>Salários congelados</strong> enquanto <strong>custo de vida explode</strong>. Você luta para <strong>'fechar as contas'</strong> e vive com <strong>medo de imprevistos financeiros</strong>.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-dizzy"></i> Resultado:</strong> <strong>Ansiedade constante</strong> sobre dinheiro e necessidade de aceitar <strong>mais plantões para sobreviver</strong>.
+                    </div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Perda de Propósito e Qualidade de Vida</h3>
+                    <p><i class="fas fa-hospital"></i> Você entrou na saúde para <strong>ajudar pessoas</strong>, mas agora só consegue pensar em <strong>'quando vai terminar este plantão'</strong>. Sua família reclama que você <strong>nunca está presente</strong>.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-sad-tear"></i> Resultado:</strong> Sensação de que <strong>perdeu o controle da própria vida</strong> e questionamento se vale a pena continuar assim.
+                    </div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Distúrbios do Sono e Saúde Física</h3>
+                    <p><i class="fas fa-moon"></i> <strong>Plantões noturnos</strong> e <strong>horários irregulares</strong> destroem seu <strong>ciclo circadiano</strong>. Você desenvolve insônia, fadiga crônica e problemas de saúde que afetam sua qualidade de vida.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-tired"></i> Resultado:</strong> <strong>Imunidade baixa</strong>, problemas digestivos e risco aumentado de doenças crônicas.
+                    </div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Isolamento Social e Familiar</h3>
+                    <p><i class="fas fa-user-friends"></i> <strong>Plantões em datas especiais</strong>, <strong>ausência em eventos familiares</strong> e <strong>falta de tempo para relacionamentos</strong> fazem você se sentir isolado e distante das pessoas que ama.</p>
+                    <div class="problem-result">
+                        <strong><i class="fas fa-user-times"></i> Resultado:</strong> <strong>Solidão</strong>, problemas de relacionamento e sensação de que está perdendo momentos importantes da vida.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -259,99 +236,78 @@
                 <h2>Produtos VitaTop - Sua Solução para Liberdade</h2>
                 <p>Conheça os produtos naturais que estão transformando a vida de milhares de pessoas e podem transformar a sua também</p>
             </div>
-            <div class="products-swiper-container">
-                <div class="swiper products-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="product-image">
-                                    <div class="product-badge">Mais Vendido</div>
-                                    <img src="https://amarguinho.meiti.com.br/img/amarguinho.png" alt="">
-                                </div>
-                                <h3>Amarguinho</h3>
-                                <p>Acabou com azia, refluxo e problemas estomacais. Natural e sem efeitos colaterais.</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Alívio imediato</span>
-                                    <span><i class="fas fa-check"></i> 100% natural</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="product-image">
-                                    <img src="https://vitatop.tecskill.com.br/foto/45/EXTRATO-DE-PROPOLIS-3.webp" alt="">
-                                </div>
-                                <h3>Extrato Alcoólico de Própolis 30ML</h3>
-                                <p>Produto natural e altíssima qualidade.</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Imunidade</span>
-                                    <span><i class="fas fa-check"></i> Antioxidante e Anti-inflamatório</span>
-                                    <span><i class="fas fa-check"></i> Cicatrização e Regeneração</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="product-image">
-                                    <img src="https://vitatop.tecskill.com.br/foto/51/682348c6648f8_fortalece.png" alt="">
-                                </div>
-                                <h3>Fortalece</h3>
-                                <p>A força que seu cabelo Merece, conheça o Fortalece.</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Crescimento forte</span>
-                                    <span><i class="fas fa-check"></i> Queda reduzida</span>
-                                    <span><i class="fas fa-check"></i> Nutrição Completa</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="product-image">
-                                    <img src="https://vitatop.tecskill.com.br/foto/52/68234cfec17f7_kit_hair.png" alt="">
-                                </div>
-                                <h3>Kit VitaTop Hair</h3>
-                                <p>Linha perfeita para quem busca solução completa para combater a queda de cabelo.</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Crescimento forte</span>
-                                    <span><i class="fas fa-check"></i> Queda reduzida</span>
-                                    <span><i class="fas fa-check"></i> Nutrição Completa</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
-                                <div class="product-image">
-                                    <img src="https://vitatop.tecskill.com.br/foto/2/GLICOTOP.webp" alt="">
-                                </div>
-                                <h3>Glicotop</h3>
-                                <p>Suplemento natural composto por ervas medicinais, vitaminas e minerais que atuam prevenindo complicações do Diabetes</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Controle glicêmico</span>
-                                    <span><i class="fas fa-check"></i> Circulação Saudável</span>
-                                    <span><i class="fas fa-check"></i> Saúde dos Olhos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
-                                <div class="product-image">
-                                    <img src="https://vitatop.tecskill.com.br/foto/3/MAGRITOP.webp" alt="">
-                                </div>
-                                <h3>Magritop</h3>
-                                <p>Acelera o metabolismo e ajuda no controle de peso de forma saudável e natural.</p>
-                                <div class="product-benefits">
-                                    <span><i class="fas fa-check"></i> Queima gordura</span>
-                                    <span><i class="fas fa-check"></i> Acelera metabolismo</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <div class="product-badge">Mais Vendido</div>
+                        <img src="https://amarguinho.meiti.com.br/img/amarguinho.png" alt="">
+                    </div>
+                    <h3>Amarguinho</h3>
+                    <p>Acabou com azia, refluxo e problemas estomacais. Natural e sem efeitos colaterais.</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Alívio imediato</span>
+                        <span><i class="fas fa-check"></i> 100% natural</span>
                     </div>
                 </div>
-                <!-- Navegação do Swiper -->
-                <div class="swiper-button-next products-next"></div>
-                <div class="swiper-button-prev products-prev"></div>
-                <!-- Paginação do Swiper -->
-                <div class="swiper-pagination products-pagination"></div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://vitatop.tecskill.com.br/foto/45/EXTRATO-DE-PROPOLIS-3.webp" alt="">
+                    </div>
+                    <h3>Extrato Alcoólico de Própolis 30ML</h3>
+                    <p>Produto natural e altíssima qualidade.</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Imunidade</span>
+                        <span><i class="fas fa-check"></i> Antioxidante e Anti-inflamatório</span>
+                        <span><i class="fas fa-check"></i> Cicatrização e Regeneração</span>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="https://vitatop.tecskill.com.br/foto/51/682348c6648f8_fortalece.png" alt="">
+                    </div>
+                    <h3>Fortalece</h3>
+                    <p>A força que seu cabelo Merece, conheça o Fortalece.</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Crescimento forte</span>
+                        <span><i class="fas fa-check"></i> Queda reduzida</span>
+                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="product-image">
+                        <img src="https://vitatop.tecskill.com.br/foto/52/68234cfec17f7_kit_hair.png" alt="">
+                    </div>
+                    <h3>Kit VitaTop Hair</h3>
+                    <p>Linha perfeita para quem busca solução completa para combater a queda de cabelo.</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Crescimento forte</span>
+                        <span><i class="fas fa-check"></i> Queda reduzida</span>
+                        <span><i class="fas fa-check"></i> Nutrição Completa</span>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="product-image">
+                        <img src="https://vitatop.tecskill.com.br/foto/2/GLICOTOP.webp" alt="">
+                    </div>
+                    <h3>Glicotop</h3>
+                    <p>Suplemento natural composto por ervas medicinais, vitaminas e minerais que atuam prevenindo complicações do Diabetes</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Controle glicêmico</span>
+                        <span><i class="fas fa-check"></i> Circulação Saudável</span>
+                        <span><i class="fas fa-check"></i> Saúde dos Olhos</span>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="product-image">
+                        <img src="https://vitatop.tecskill.com.br/foto/3/MAGRITOP.webp" alt="">
+                    </div>
+                    <h3>Magritop</h3>
+                    <p>Acelera o metabolismo e ajuda no controle de peso de forma saudável e natural.</p>
+                    <div class="product-benefits">
+                        <span><i class="fas fa-check"></i> Queima gordura</span>
+                        <span><i class="fas fa-check"></i> Acelera metabolismo</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -560,7 +516,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
